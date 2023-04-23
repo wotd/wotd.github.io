@@ -128,7 +128,7 @@ Access service behind VPN In this simple scenario, I would like to access a serv
   <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
 <p><a href="https://openvpn.net">OpenVPN</a> is one of the most popular VPN systems. It runs smoothly on Windows, Linux, and macOS. But sometimes you would like to have the option to access some service (like an HTTP server or SSH), but you don&rsquo;t want to install new software on your machine. Docker comes to the rescue 🐳</p>
 <h3 id="access-service-behind-vpn">Access service behind VPN<a hidden class="anchor" aria-hidden="true" href="#access-service-behind-vpn">#</a></h3>
-<p><img loading="lazy" src="/images/OpenVPN-in-Docker/vpn.png" alt="Scenario: Service behind VPN"  />
+<p><img loading="lazy" src="/OpenVPN-in-Docker/vpn.png" alt="Scenario: Service behind VPN"  />
 </p>
 <p>In this simple scenario, I would like to access a server (SSH, web, or anything else) located in a private network. I&rsquo;ve prepared a simple Docker file to install <code>supervisor</code>, <code>openvpn</code> and <code>socat</code>. I am also copying the prepared supervisor config files:</p>
 <pre tabindex="0"><code>FROM ubuntu:20.04
@@ -170,8 +170,9 @@ autostart = true
 <h3 id="how-to-use-it">How to use it?<a hidden class="anchor" aria-hidden="true" href="#how-to-use-it">#</a></h3>
 <pre tabindex="0"><code>docker run --rm -v ${PWD}/vpnconfig.ovpn:/vpnconfig.ovpn -p 10022:10022 docker-vpn
 </code></pre><p>I am exposing 10022 port from Docker container and putting <code>vpnconfig.ovpn</code> file in place required by openvpn client installed inside of the docker image.</p>
-<p>When container starts, you can access <code>10.14.11.20</code> server using: <code>ssh user@localhost -p 10022</code>.</p>
-<p>Simillar config you can prepare for http, database or any other service.</p>
+<p>When container starts, you can access <code>10.14.11.20</code> server using command:</p>
+<pre tabindex="0"><code>ssh user@localhost -p 10022
+</code></pre><p>Simillar config you can prepare for http, database or any other service.</p>
 <p>In next post, I will show you how you can use makefile to automate connectivity.</p>
 <h4 id="additional-reading">Additional reading<a hidden class="anchor" aria-hidden="true" href="#additional-reading">#</a></h4>
 <ul>
