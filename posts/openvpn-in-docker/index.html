@@ -5,13 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Diagrams as a Code | ᘛ⁐̤ᕐᐷ</title>
-<meta name="keywords" content="docker">
-<meta name="description" content="Introduction Recently, I wanted to draw a simple network diagram, and I recalled a nice application I know. It can be used to draw cloud diagrams, and it supports main Cloud providers like Azure, AWS, and GCP. Just take a look at the webpage where you can find some nice examples.
-I&rsquo;ve prepared a simple Docker image, so you can try the application without installing anything.
-Usage The Diagrams webpage is full of nice examples and documentation, so go there for further reading.">
+<title>OpenVPN in Docker | ᘛ⁐̤ᕐᐷ</title>
+<meta name="keywords" content="docker, network">
+<meta name="description" content="Introduction OpenVPN is one of the most popular VPN systems. It runs smoothly on Windows, Linux, and macOS. But sometimes you would like to have the option to access some service (like an HTTP server or SSH), but you don&rsquo;t want to install new software on your machine. Docker comes to the rescue 🐳
+Access service behind VPN In this simple scenario, I would like to access a server (SSH, web, or anything else) located in a private network.">
 <meta name="author" content="">
-<link rel="canonical" href="https://www.n01.es/posts/diagrams-as-a-code/">
+<link rel="canonical" href="https://www.n01.es/posts/openvpn-in-docker/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -120,51 +119,66 @@ Usage The Diagrams webpage is full of nice examples and documentation, so go the
   <header class="post-header">
     
     <h1 class="post-title">
-      Diagrams as a Code
+      OpenVPN in Docker
     </h1>
-    <div class="post-meta"><span title='2023-04-17 21:46:11 +0000 UTC'>April 17, 2023</span>&nbsp;·&nbsp;2 min
+    <div class="post-meta"><span title='2023-04-17 21:34:41 +0000 UTC'>April 17, 2023</span>&nbsp;·&nbsp;3 min
 
 </div>
   </header> 
   <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
-<p>Recently, I wanted to draw a simple network diagram, and I recalled a nice application I know. It can be used to draw cloud diagrams, and it supports main Cloud providers like Azure, AWS, and GCP. Just take a look at the <a href="https://diagrams.mingrammer.com/">webpage</a> where you can find some nice examples.</p>
-<p>I&rsquo;ve prepared a simple Docker image, so you can try the application without installing anything.</p>
-<h2 id="usage">Usage<a hidden class="anchor" aria-hidden="true" href="#usage">#</a></h2>
-<p>The Diagrams webpage is full of nice examples and documentation, so go there for further reading. If you know Python 🐍, you are good to go 😄 Let&rsquo;s see the sample provided by the developer:</p>
-<pre tabindex="0"><code># diag.py
-from diagrams import Diagram
-from diagrams.aws.compute import EC2
-from diagrams.aws.database import RDS
-from diagrams.aws.network import ELB
-
-with Diagram(&#34;Web Service&#34;, show=False):
-    ELB(&#34;lb&#34;) &gt;&gt; EC2(&#34;web&#34;) &gt;&gt; RDS(&#34;userdb&#34;)
-</code></pre><p>Start by importing the Diagram class, EC2, RDS, and ELB. We can add a diagram&rsquo;s title with <code>Diagram(&quot;Web Service&quot;, show=False)</code>. The <code>show=False</code> parameter disables the auto-opening of new images (I am using Docker anyway). Another nice parameter is <code>outformat</code>, which can be used to specify the output file format (PNG (default), JPG, SVG, PDF, and DOT).</p>
-<h2 id="docker">Docker<a hidden class="anchor" aria-hidden="true" href="#docker">#</a></h2>
-<p>This is simple Dockerfile I used to build image:</p>
-<pre tabindex="0"><code>FROM alpine:3.17.3
-
-RUN mkdir /src
-WORKDIR /src
-# Install dependencies
-RUN apk add py3-pip gcc python3-dev musl-dev graphviz fontconfig \
-    # Install fonts
-    &amp;&amp; apk add font-inconsolata font-dejavu font-noto font-noto-cjk font-awesome font-noto-extra \
-    &amp;&amp; pip install diagrams
-
-CMD [ &#34;diagram.py&#34; ]
-ENTRYPOINT [ &#34;python&#34; ]
-</code></pre><p>I am using Alpine Linux and set &ldquo;/src&rdquo; as a WORKDIR. Next, I am installing the dependencies and fonts required by Diagrams.</p>
-<p><code>ENTRYPOINT [ &quot;python&quot; ]</code> - python interpreter is set as the default application running after Docker image starts.
-<code>CMD [ &quot;diagram.py&quot; ]</code> - argument for ENTRYPOINT - the default name of the file with diagram code.</p>
-<p>Now, we can build the image using the well-known command:</p>
-<p><code>docker build . -t diagrams</code></p>
-<h3 id="usage-1">Usage<a hidden class="anchor" aria-hidden="true" href="#usage-1">#</a></h3>
-<p>To create your diagram using Docker image, run the command within the directory with the diagram code. We will mount the current directory into Docker:</p>
-<pre tabindex="0"><code>docker run --rm -v ${PWD}:/src diagrams diag.py
-</code></pre><p>💥💥💥
-The image will be in the same directory.</p>
-<p>Happy diagramming 😄</p>
+<p><a href="https://openvpn.net">OpenVPN</a> is one of the most popular VPN systems. It runs smoothly on Windows, Linux, and macOS. But sometimes you would like to have the option to access some service (like an HTTP server or SSH), but you don&rsquo;t want to install new software on your machine. Docker comes to the rescue 🐳</p>
+<h3 id="access-service-behind-vpn">Access service behind VPN<a hidden class="anchor" aria-hidden="true" href="#access-service-behind-vpn">#</a></h3>
+<p><img loading="lazy" src="/images/OpenVPN-in-Docker/vpn.png" alt="Scenario: Service behind VPN"  />
+</p>
+<p>In this simple scenario, I would like to access a server (SSH, web, or anything else) located in a private network. I&rsquo;ve prepared a simple Docker file to install <code>supervisor</code>, <code>openvpn</code> and <code>socat</code>. I am also copying the prepared supervisor config files:</p>
+<pre tabindex="0"><code>FROM ubuntu:20.04
+EXPOSE 10022
+RUN apt update &amp;&amp; apt install -y supervisor openvpn socat &amp;&amp; \
+    apt clean
+COPY *.conf /etc/supervisor/conf.d/
+ENTRYPOINT [&#34;/usr/bin/supervisord&#34;, &#34;-c&#34;, &#34;/etc/supervisor/conf.d/supervisord.conf&#34;]
+</code></pre><h3 id="config-files">Config files<a hidden class="anchor" aria-hidden="true" href="#config-files">#</a></h3>
+<p>To run the OpenVPN client with supervisor and socat, we have to prepare config files for all of those services first. All those files should be copied to the <code>/etc/supervisor/conf.d/</code> directory inside the Docker image.</p>
+<h4 id="supervisor-config">supervisor config<a hidden class="anchor" aria-hidden="true" href="#supervisor-config">#</a></h4>
+<pre tabindex="0"><code>[supervisord]
+nodaemon=true
+logfile=/var/log/supervisor/supervisord.log
+pidfile=/var/run/supervisord.pid
+[include]
+files = /etc/supervisor/conf.d/*.conf
+</code></pre><p>I am running <code>supervisord</code> as a daemon, configuring the logfile, pid file, and including config files.</p>
+<h4 id="openvpn">openvpn<a hidden class="anchor" aria-hidden="true" href="#openvpn">#</a></h4>
+<pre tabindex="0"><code>[program:openvpn]
+command = openvpn --config /vpnconfig.ovpn
+redirect_stderr = true
+redirect_stdout = true
+autostart = true
+</code></pre><p>I want to redirect messages and errors from the service (OpenVPN, in this case) back to the <code>supervisor</code> stdout descriptor. In that case, I should have all logs from this service visible in the Docker logs or in a specified file (in my case).</p>
+<p>I am also defining the command that should be used to run OpenVPN, and I am pointing to the <code>vpnconfig</code> file (the one that contains things like certificates and VPN server address).</p>
+<h4 id="socat">socat<a hidden class="anchor" aria-hidden="true" href="#socat">#</a></h4>
+<pre tabindex="0"><code>[program:socat_10022]
+command = socat tcp-listen:10022,reuseaddr,fork tcp:10.14.11.20:22
+redirect_stderr = true
+redirect_stdout = true
+autostart = true
+</code></pre><p>Similar to the OpenVPN config file, I am configuring <code>socat</code> to listen on port <code>10022</code> and forward traffic to the <code>10.14.11.20</code> SSH service (port 22).</p>
+<h3 id="building-docker-image">Building docker image<a hidden class="anchor" aria-hidden="true" href="#building-docker-image">#</a></h3>
+<pre tabindex="0"><code>echo &#34;vpnconfig.ovpn&#34; &gt;&gt; .dockerignore
+</code></pre><p>Just in case, to prevent putting confidential file into docker image.</p>
+<pre tabindex="0"><code>docker build . -t docker-vpn
+</code></pre><p>Just regular building docker image. Make sure that you put all config files mentioned earlier in the directory with Dockerfile.</p>
+<h3 id="how-to-use-it">How to use it?<a hidden class="anchor" aria-hidden="true" href="#how-to-use-it">#</a></h3>
+<pre tabindex="0"><code>docker run --rm -v ${PWD}/vpnconfig.ovpn:/vpnconfig.ovpn -p 10022:10022 docker-vpn
+</code></pre><p>I am exposing 10022 port from Docker container and putting <code>vpnconfig.ovpn</code> file in place required by openvpn client installed inside of the docker image.</p>
+<p>When container starts, you can access <code>10.14.11.20</code> server using: <code>ssh user@localhost -p 10022</code>.</p>
+<p>Simillar config you can prepare for http, database or any other service.</p>
+<p>In next post, I will show you how you can use makefile to automate connectivity.</p>
+<h4 id="additional-reading">Additional reading<a hidden class="anchor" aria-hidden="true" href="#additional-reading">#</a></h4>
+<ul>
+<li><a href="http://supervisord.org">supervisor documentation</a></li>
+<li><a href="http://www.dest-unreach.org/socat/doc/socat.html">socat documentation</a></li>
+<li><a href="https://copyconstruct.medium.com/socat-29453e9fc8a6">medium article about socat</a></li>
+</ul>
 
 
   </div>
@@ -172,6 +186,7 @@ The image will be in the same directory.</p>
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://www.n01.es/tags/docker/">docker</a></li>
+      <li><a href="https://www.n01.es/tags/network/">network</a></li>
     </ul>
   </footer>
 </article>

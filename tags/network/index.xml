@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>network on ᘛ⁐̤ᕐᐷ</title>
+    <link>https://www.n01.es/tags/network/</link>
+    <description>Recent content in network on ᘛ⁐̤ᕐᐷ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Apr 2023 21:34:41 +0000</lastBuildDate><atom:link href="https://www.n01.es/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenVPN in Docker</title>
+      <link>https://www.n01.es/posts/openvpn-in-docker/</link>
+      <pubDate>Mon, 17 Apr 2023 21:34:41 +0000</pubDate>
+      
+      <guid>https://www.n01.es/posts/openvpn-in-docker/</guid>
+      <description>Introduction OpenVPN is one of the most popular VPN systems. It runs smoothly on Windows, Linux, and macOS. But sometimes you would like to have the option to access some service (like an HTTP server or SSH), but you don&amp;rsquo;t want to install new software on your machine. Docker comes to the rescue 🐳
+Access service behind VPN In this simple scenario, I would like to access a server (SSH, web, or anything else) located in a private network.</description>
+    </item>
+    
+  </channel>
+</rss>

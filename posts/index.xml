@@ -13,9 +13,19 @@
       <pubDate>Mon, 17 Apr 2023 21:46:11 +0000</pubDate>
       
       <guid>https://www.n01.es/posts/diagrams-as-a-code/</guid>
-      <description>Introduction Recently I wanted to draw simple network diagram and I recalled nice application I know. It can be used to draw cloud diagrams and it supports main Cloud providers like Azure, AWS, GCP. Just take a look on webpage where you can find some nice examples.
-I&amp;rsquo;ve prepared simple Docker image so you can try application without installing anything.
-Usage Diagrams webpage is full of nice examples and documentation, so go there for furhter reading.</description>
+      <description>Introduction Recently, I wanted to draw a simple network diagram, and I recalled a nice application I know. It can be used to draw cloud diagrams, and it supports main Cloud providers like Azure, AWS, and GCP. Just take a look at the webpage where you can find some nice examples.
+I&amp;rsquo;ve prepared a simple Docker image, so you can try the application without installing anything.
+Usage The Diagrams webpage is full of nice examples and documentation, so go there for further reading.</description>
+    </item>
+    
+    <item>
+      <title>OpenVPN in Docker</title>
+      <link>https://www.n01.es/posts/openvpn-in-docker/</link>
+      <pubDate>Mon, 17 Apr 2023 21:34:41 +0000</pubDate>
+      
+      <guid>https://www.n01.es/posts/openvpn-in-docker/</guid>
+      <description>Introduction OpenVPN is one of the most popular VPN systems. It runs smoothly on Windows, Linux, and macOS. But sometimes you would like to have the option to access some service (like an HTTP server or SSH), but you don&amp;rsquo;t want to install new software on your machine. Docker comes to the rescue 🐳
+Access service behind VPN In this simple scenario, I would like to access a server (SSH, web, or anything else) located in a private network.</description>
     </item>
     
   </channel>
