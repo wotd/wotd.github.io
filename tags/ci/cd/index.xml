@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CI/CD on ᘛ⁐̤ᕐᐷ</title>
+    <link>https://www.n01.es/tags/ci/cd/</link>
+    <description>Recent content in CI/CD on ᘛ⁐̤ᕐᐷ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://www.n01.es/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CI CD Table</title>
+      <link>https://www.n01.es/posts/ci-cd-table/</link>
+      <pubDate>Sat, 06 May 2023 09:50:01 +0000</pubDate>
+      
+      <guid>https://www.n01.es/posts/ci-cd-table/</guid>
+      <description>Simple cheatsheet table to show differences between Continuous Integration / Continuous Delivery / Continuous Deployment
+Continuous Integration Continuous Delivery Continuous Deployment Code builds and is properly tested Code builds and is properly tested Code builds and is properly tested Code is integrated to the codebase Code is integrated to the codebase Code is integrated to the codebase &amp;ndash; Code is ready for release Code is ready for release &amp;ndash; &amp;ndash; Code is automatically deployed at the end of the CI/CD pipeline </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -101,11 +101,6 @@ Access service behind VPN In this simple scenario, I would like to access a serv
         </div>
         <ul id="menu">
             <li>
-                <a href="https://www.n01.es/categories/" title="categories">
-                    <span>categories</span>
-                </a>
-            </li>
-            <li>
                 <a href="https://www.n01.es/tags/" title="tags">
                     <span>tags</span>
                 </a>
@@ -168,8 +163,11 @@ autostart = true
 <pre tabindex="0"><code>docker build . -t docker-vpn
 </code></pre><p>Just regular building docker image. Make sure that you put all config files mentioned earlier in the directory with Dockerfile.</p>
 <h3 id="how-to-use-it">How to use it?<a hidden class="anchor" aria-hidden="true" href="#how-to-use-it">#</a></h3>
-<pre tabindex="0"><code>docker run --rm -v ${PWD}/vpnconfig.ovpn:/vpnconfig.ovpn -p 10022:10022 docker-vpn
-</code></pre><p>I am exposing 10022 port from Docker container and putting <code>vpnconfig.ovpn</code> file in place required by openvpn client installed inside of the docker image.</p>
+<pre tabindex="0"><code>docker run --rm -v ${PWD}/vpnconfig.ovpn:/vpnconfig.ovpn -p 10022:10022 --cap-add=NET_ADMIN --cap-add=SYS_MODULE --device /dev/net/tun docker-vpn
+</code></pre><p><code>--cap-add=NET_ADMIN</code> - is used for interaction with network stack without using privileged docker container
+<code>--cap-add=SYS_MODULE</code> - simillar for SYS_MODULE
+<code>--device /dev/net/tun</code> - I am adding device to the docker</p>
+<p>I am exposing 10022 port from Docker container and putting <code>vpnconfig.ovpn</code> file in place required by openvpn client installed inside of the docker image.</p>
 <p>When container starts, you can access <code>10.14.11.20</code> server using command:</p>
 <pre tabindex="0"><code>ssh user@localhost -p 10022
 </code></pre><p>Simillar config you can prepare for http, database or any other service.</p>

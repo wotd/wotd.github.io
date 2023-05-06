@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.n01.es/posts/ci-cd-table/</loc>
+    <lastmod>2023-05-06T09:50:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.n01.es/tags/devops/</loc>
+    <lastmod>2023-05-06T09:50:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.n01.es/posts/</loc>
+    <lastmod>2023-05-06T09:50:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.n01.es/tags/</loc>
+    <lastmod>2023-05-06T09:50:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.n01.es/</loc>
+    <lastmod>2023-05-06T09:50:01+00:00</lastmod>
+  </url><url>
     <loc>https://www.n01.es/posts/diagrams-as-a-code/</loc>
     <lastmod>2023-04-17T21:46:11+00:00</lastmod>
   </url><url>
     <loc>https://www.n01.es/tags/docker/</loc>
-    <lastmod>2023-04-17T21:46:11+00:00</lastmod>
-  </url><url>
-    <loc>https://www.n01.es/posts/</loc>
-    <lastmod>2023-04-17T21:46:11+00:00</lastmod>
-  </url><url>
-    <loc>https://www.n01.es/tags/</loc>
-    <lastmod>2023-04-17T21:46:11+00:00</lastmod>
-  </url><url>
-    <loc>https://www.n01.es/</loc>
     <lastmod>2023-04-17T21:46:11+00:00</lastmod>
   </url><url>
     <loc>https://www.n01.es/tags/network/</loc>
@@ -24,5 +30,7 @@
     <lastmod>2023-04-17T21:34:41+00:00</lastmod>
   </url><url>
     <loc>https://www.n01.es/categories/</loc>
+  </url><url>
+    <loc>https://www.n01.es/tags/ci/cd/</loc>
   </url>
 </urlset>

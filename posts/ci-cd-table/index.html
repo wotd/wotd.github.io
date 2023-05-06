@@ -5,12 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Categories | ᘛ⁐̤ᕐᐷ</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
+<title>CI CD Table | ᘛ⁐̤ᕐᐷ</title>
+<meta name="keywords" content="DevOps, CI/CD">
+<meta name="description" content="Simple cheatsheet table to show differences between Continuous Integration / Continuous Delivery / Continuous Deployment
+Continuous Integration Continuous Delivery Continuous Deployment Code builds and is properly tested Code builds and is properly tested Code builds and is properly tested Code is integrated to the codebase Code is integrated to the codebase Code is integrated to the codebase &ndash; Code is ready for release Code is ready for release &ndash; &ndash; Code is automatically deployed at the end of the CI/CD pipeline ">
 <meta name="author" content="">
-<link rel="canonical" href="https://www.n01.es/categories/">
+<link rel="canonical" href="https://www.n01.es/posts/ci-cd-table/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.n01.es/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.n01.es/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.n01.es/favicon-32x32.png">
@@ -18,7 +21,6 @@
 <link rel="mask-icon" href="https://www.n01.es/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://www.n01.es/categories/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,7 +60,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -107,12 +109,60 @@
     </nav>
 </header>
 <main class="main">
-<header class="page-header">
-    <h1>Categories</h1>
-</header>
 
-<ul class="terms-tags">
-</ul>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      CI CD Table
+    </h1>
+    <div class="post-meta"><span title='2023-05-06 09:50:01 +0000 UTC'>May 6, 2023</span>&nbsp;·&nbsp;1 min
+
+</div>
+  </header> 
+  <div class="post-content"><p>Simple cheatsheet table to show differences between Continuous Integration / Continuous Delivery / Continuous Deployment</p>
+<table>
+<thead>
+<tr>
+<th>Continuous Integration</th>
+<th>Continuous Delivery</th>
+<th>Continuous Deployment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code builds and is properly tested</td>
+<td>Code builds and is properly tested</td>
+<td>Code builds and is properly tested</td>
+</tr>
+<tr>
+<td>Code is integrated to the codebase</td>
+<td>Code is integrated to the codebase</td>
+<td>Code is integrated to the codebase</td>
+</tr>
+<tr>
+<td>&ndash;</td>
+<td>Code is ready for release</td>
+<td>Code is ready for release</td>
+</tr>
+<tr>
+<td>&ndash;</td>
+<td>&ndash;</td>
+<td>Code is automatically deployed at the end of the CI/CD pipeline</td>
+</tr>
+</tbody>
+</table>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.n01.es/tags/devops/">DevOps</a></li>
+      <li><a href="https://www.n01.es/tags/ci/cd/">CI/CD</a></li>
+    </ul>
+  </footer>
+</article>
     </main>
     
 <footer class="footer">
@@ -182,6 +232,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
