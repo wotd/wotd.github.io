@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Helm on ᘛ⁐̤ᕐᐷ</title>
+    <link>https://www.n01.es/tags/helm/</link>
+    <description>Recent content in Helm on ᘛ⁐̤ᕐᐷ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Jun 2023 11:54:00 +0000</lastBuildDate><atom:link href="https://www.n01.es/tags/helm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful Helm Commands</title>
+      <link>https://www.n01.es/posts/useful-helm-commands/</link>
+      <pubDate>Sun, 18 Jun 2023 11:54:00 +0000</pubDate>
+      
+      <guid>https://www.n01.es/posts/useful-helm-commands/</guid>
+      <description>This list will be upgraded!
+List available chart versions helm search repo superset/superset --versions Show values for specific chart version helm show values superset/superset --version 0.8.7 </description>
+    </item>
+    
+  </channel>
+</rss>

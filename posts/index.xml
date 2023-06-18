@@ -13,7 +13,7 @@
       <pubDate>Sun, 18 Jun 2023 11:54:00 +0000</pubDate>
       
       <guid>https://www.n01.es/posts/useful-helm-commands/</guid>
-      <description>Helm commands I like to use This list will be upgraded!
+      <description>This list will be upgraded!
 List available chart versions helm search repo superset/superset --versions Show values for specific chart version helm show values superset/superset --version 0.8.7 </description>
     </item>
     
