@@ -6,20 +6,11 @@
     <description>Recent content in Tags on ᘛ⁐̤ᕐᐷ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 May 2023 09:50:01 +0000</lastBuildDate><atom:link href="https://www.n01.es/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>DevOps</title>
-      <link>https://www.n01.es/tags/devops/</link>
-      <pubDate>Sat, 06 May 2023 09:50:01 +0000</pubDate>
-      
-      <guid>https://www.n01.es/tags/devops/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 18 Jun 2023 11:54:00 +0000</lastBuildDate><atom:link href="https://www.n01.es/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker</title>
       <link>https://www.n01.es/tags/docker/</link>
-      <pubDate>Mon, 17 Apr 2023 21:46:11 +0000</pubDate>
+      <pubDate>Sun, 18 Jun 2023 11:54:00 +0000</pubDate>
       
       <guid>https://www.n01.es/tags/docker/</guid>
       <description></description>
@@ -28,9 +19,18 @@
     <item>
       <title>network</title>
       <link>https://www.n01.es/tags/network/</link>
-      <pubDate>Mon, 17 Apr 2023 21:34:41 +0000</pubDate>
+      <pubDate>Sun, 18 Jun 2023 11:54:00 +0000</pubDate>
       
       <guid>https://www.n01.es/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://www.n01.es/tags/devops/</link>
+      <pubDate>Sat, 06 May 2023 09:50:01 +0000</pubDate>
+      
+      <guid>https://www.n01.es/tags/devops/</guid>
       <description></description>
     </item>
     
