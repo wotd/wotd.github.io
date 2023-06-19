@@ -115,6 +115,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Change_files_extensions
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Simple example of bash script that is changing files extension in desired directory:
+#!/bin/bash CURRENT_EXTENSION=&#34;${1-mp3}&#34; NEW_EXTENSION=&#34;${2-mp4}&#34; FILES_PATH=&#34;${3-$PWD}&#34; FILES_LIST=$(find ${FILES_PATH} -maxdepth 1 -name &#34;*.${CURRENT_EXTENSION}&#34;) for FILE in $FILES_LIST; do NEW_FILE=$(echo &#34;$FILE&#34; | sed &#34;s/${CURRENT_EXTENSION}/${NEW_EXTENSION}/&#34;) echo &#34;Renaming file: $FILE -&gt; $NEW_FILE&#34; mv $FILE $NEW_FILE done Usage You can use it by simple executing file:
+./change_ext.sh It will be executed with default settings: extensions to change: mp3, new extension will be mp4 and script will look for files in current directory....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-19 06:45:04 +0000 UTC'>June 19, 2023</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to Change_files_extensions" href="https://www.n01.es/posts/change-files-extensions/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Useful Helm Commands
     </h2>
   </header>

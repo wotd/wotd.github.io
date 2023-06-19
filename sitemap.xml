@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.n01.es/tags/bash/</loc>
+    <lastmod>2023-06-19T06:45:04+00:00</lastmod>
+  </url><url>
+    <loc>https://www.n01.es/posts/change-files-extensions/</loc>
+    <lastmod>2023-06-19T06:45:04+00:00</lastmod>
+  </url><url>
+    <loc>https://www.n01.es/posts/</loc>
+    <lastmod>2023-06-19T06:45:04+00:00</lastmod>
+  </url><url>
+    <loc>https://www.n01.es/tags/scripts/</loc>
+    <lastmod>2023-06-19T06:45:04+00:00</lastmod>
+  </url><url>
+    <loc>https://www.n01.es/tags/</loc>
+    <lastmod>2023-06-19T06:45:04+00:00</lastmod>
+  </url><url>
+    <loc>https://www.n01.es/</loc>
+    <lastmod>2023-06-19T06:45:04+00:00</lastmod>
+  </url><url>
     <loc>https://www.n01.es/tags/helm/</loc>
     <lastmod>2023-06-18T11:54:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.n01.es/posts/</loc>
-    <lastmod>2023-06-18T11:54:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.n01.es/tags/</loc>
-    <lastmod>2023-06-18T11:54:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.n01.es/posts/useful-helm-commands/</loc>
-    <lastmod>2023-06-18T11:54:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.n01.es/</loc>
     <lastmod>2023-06-18T11:54:00+00:00</lastmod>
   </url><url>
     <loc>https://www.n01.es/posts/ci-cd-table/</loc>

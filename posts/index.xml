@@ -6,7 +6,18 @@
     <description>Recent content in Posts on ᘛ⁐̤ᕐᐷ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jun 2023 11:54:00 +0000</lastBuildDate><atom:link href="https://www.n01.es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 06:45:04 +0000</lastBuildDate><atom:link href="https://www.n01.es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Change_files_extensions</title>
+      <link>https://www.n01.es/posts/change-files-extensions/</link>
+      <pubDate>Mon, 19 Jun 2023 06:45:04 +0000</pubDate>
+      
+      <guid>https://www.n01.es/posts/change-files-extensions/</guid>
+      <description>Simple example of bash script that is changing files extension in desired directory:
+#!/bin/bash CURRENT_EXTENSION=&amp;#34;${1-mp3}&amp;#34; NEW_EXTENSION=&amp;#34;${2-mp4}&amp;#34; FILES_PATH=&amp;#34;${3-$PWD}&amp;#34; FILES_LIST=$(find ${FILES_PATH} -maxdepth 1 -name &amp;#34;*.${CURRENT_EXTENSION}&amp;#34;) for FILE in $FILES_LIST; do NEW_FILE=$(echo &amp;#34;$FILE&amp;#34; | sed &amp;#34;s/${CURRENT_EXTENSION}/${NEW_EXTENSION}/&amp;#34;) echo &amp;#34;Renaming file: $FILE -&amp;gt; $NEW_FILE&amp;#34; mv $FILE $NEW_FILE done Usage You can use it by simple executing file:
+./change_ext.sh It will be executed with default settings: extensions to change: mp3, new extension will be mp4 and script will look for files in current directory.</description>
+    </item>
+    
     <item>
       <title>Useful Helm Commands</title>
       <link>https://www.n01.es/posts/useful-helm-commands/</link>
