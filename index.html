@@ -107,74 +107,40 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
+<main class="main"><div class="profile">
+    <div class="profile_inner">
+        <img draggable="false" src="https://www.n01.es/image/possum.png" alt="black and white possum using laptop" title="black and white possum using laptop"
+            height="120" width="120" />
+        <h1>DevOps opossum</h1>
+        <span>Online notes</span><div class="social-icons">
+</div>
 
-<article class="first-entry"> 
-  <header class="entry-header">
-    <h2>Change_files_extensions
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Simple example of bash script that is changing files extension in desired directory:
-#!/bin/bash CURRENT_EXTENSION=&#34;${1-mp3}&#34; NEW_EXTENSION=&#34;${2-mp4}&#34; FILES_PATH=&#34;${3-$PWD}&#34; FILES_LIST=$(find ${FILES_PATH} -maxdepth 1 -name &#34;*.${CURRENT_EXTENSION}&#34;) for FILE in $FILES_LIST; do NEW_FILE=$(echo &#34;$FILE&#34; | sed &#34;s/${CURRENT_EXTENSION}/${NEW_EXTENSION}/&#34;) echo &#34;Renaming file: $FILE -&gt; $NEW_FILE&#34; mv $FILE $NEW_FILE done Usage You can use it by simple executing file:
-./change_ext.sh It will be executed with default settings: extensions to change: mp3, new extension will be mp4 and script will look for files in current directory....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-06-19 06:45:04 +0000 UTC'>June 19, 2023</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to Change_files_extensions" href="https://www.n01.es/posts/change-files-extensions/"></a>
-</article>
+        <div class="buttons">
+            <a class="button" href="/archive" rel="noopener" title="Archive">
+                <span class="button-inner">
+                    Archive
+                </span>
+            </a>
+            <a class="button" href="/tags" rel="noopener" title="Tags">
+                <span class="button-inner">
+                    Tags
+                </span>
+            </a>
+            <a class="button" href="https://github.com/" rel="noopener" title="Github">
+                <span class="button-inner">
+                    Github&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Useful Helm Commands
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This list will be upgraded!
-List available chart versions helm search repo superset/superset --versions Show values for specific chart version helm show values superset/superset --version 0.8.7 </p>
-  </div>
-  <footer class="entry-footer"><span title='2023-06-18 11:54:00 +0000 UTC'>June 18, 2023</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to Useful Helm Commands" href="https://www.n01.es/posts/useful-helm-commands/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>CI CD Table
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Simple cheatsheet table to show differences between Continuous Integration / Continuous Delivery / Continuous Deployment
-Continuous Integration Continuous Delivery Continuous Deployment Code builds and is properly tested Code builds and is properly tested Code builds and is properly tested Code is integrated to the codebase Code is integrated to the codebase Code is integrated to the codebase – Code is ready for release Code is ready for release – – Code is automatically deployed at the end of the CI/CD pipeline </p>
-  </div>
-  <footer class="entry-footer"><span title='2023-05-06 09:50:01 +0000 UTC'>May 6, 2023</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to CI CD Table" href="https://www.n01.es/posts/ci-cd-table/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Diagrams as a Code
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction Recently, I wanted to draw a simple network diagram, and I recalled a nice application I know. It can be used to draw cloud diagrams, and it supports main Cloud providers like Azure, AWS, and GCP. Just take a look at the webpage where you can find some nice examples.
-I’ve prepared a simple Docker image, so you can try the application without installing anything.
-Usage The Diagrams webpage is full of nice examples and documentation, so go there for further reading....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-04-17 21:46:11 +0000 UTC'>April 17, 2023</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Diagrams as a Code" href="https://www.n01.es/posts/diagrams-as-a-code/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>OpenVPN in Docker
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction OpenVPN is one of the most popular VPN systems. It runs smoothly on Windows, Linux, and macOS. But sometimes you would like to have the option to access some service (like an HTTP server or SSH), but you don’t want to install new software on your machine. Docker comes to the rescue 🐳
-Access service behind VPN In this simple scenario, I would like to access a server (SSH, web, or anything else) located in a private network....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-04-17 21:34:41 +0000 UTC'>April 17, 2023</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to OpenVPN in Docker" href="https://www.n01.es/posts/openvpn-in-docker/"></a>
-</article>
     </main>
     
 <footer class="footer">
