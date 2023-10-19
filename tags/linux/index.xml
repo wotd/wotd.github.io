@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>linux on ᘛ⁐̤ᕐᐷ</title>
+    <link>https://www.n01.es/tags/linux/</link>
+    <description>Recent content in linux on ᘛ⁐̤ᕐᐷ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Apr 2023 11:06:45 +0000</lastBuildDate><atom:link href="https://www.n01.es/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Makefile for Vpn Automation</title>
+      <link>https://www.n01.es/posts/use-makefile-for-vpn-automation/</link>
+      <pubDate>Sun, 23 Apr 2023 11:06:45 +0000</pubDate>
+      
+      <guid>https://www.n01.es/posts/use-makefile-for-vpn-automation/</guid>
+      <description>Introduction In previous note I&amp;rsquo;ve showed how to run OpenVPN client inside of the Docker container. Today, we will prepare makefile to automate establishing connectivity.
+Functions Makefile should:
+verify if configuration is in place connect to VPN disconnect from VPN configure credentials (if required) Makefile development Let&amp;rsquo;s start development with simple, empty file:
+touch makefile Variables declaration A Makefile can handle variables, and I find it useful to declare some of them at the beginning of the file.</description>
+    </item>
+    
+  </channel>
+</rss>
