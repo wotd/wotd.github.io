@@ -248,20 +248,20 @@ credentials:  ## Get VPN credentials and write to passfile
 	@echo $(USERNAME) &gt; ${PASSFILE_PATH}
 	@echo $(PASSWORD) &gt;&gt; ${PASSFILE_PATH}
 
-connect: stop verify start  ## Start new connection to Toulouse VPN executing stop -&gt; verify -&gt; start
+connect: stop verify start  ## Start new connection to VPN executing stop -&gt; verify -&gt; start
 
 .PHONY: start
-start:  ## start docker container that establishes connection to Toulouse VPN
+start:  ## start docker container that establishes connection to VPN
 	@docker run --rm -it -p 10022:10022 -p 443:443 -p 9001:9001\
   --cap-add=NET_ADMIN --cap-add=SYS_MODULE --device /dev/net/tun \
   -v ${VPN_CONFIG_PATH}:/vpnconfig.ovpn \
   -v ${PASSFILE_PATH}:/passfile \
-  --name toulouse_vpn \
+  --name vpn \
   -d ${VPN_DOCKER_IMAGE}:${VPN_VERSION}
 
 .PHONY: stop
 stop:  ## stop docker container and vpn connection
-	@docker stop toulouse_vpn || true
+	@docker stop vpn || true
 
 .PHONY: verify
 verify:  ## verify if config file and passfile are in place
