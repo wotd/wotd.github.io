@@ -115,6 +115,19 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2>Bash function example and trics
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Validata correct number of arguments if [ &#34;$#&#34; -ne 2 ]; then echo &#34;Illegal number of parameters ($#, should be 2)&#34; exit 1 fi $# returns number of parameters passed to script. If it’s less then 2, script ends with error.
+Check if environment variable is set if [ -z &#34;$CLEANING_JOB&#34; ] then echo &#34;Environmental variable [CLEANING_JOB] does not exist.&#34; exit 1 fi Bash function example set_dir_structure() { YEAR=$(date &#43;&#34;%Y&#34; &#34;$@&#34;) MONTH=$(date &#43;&#34;%m&#34; &#34;$@&#34;) DAY=$(date &#43;&#34;%d&#34; &#34;$@&#34;) HOUR=$(date &#43;&#34;%H&#34; &#34;$@&#34;) retval=&#34;$YEAR/$MONTH/$DAY/$HOUR&#34; } This function can be executed with or without parameter to get proper dir structure related with date and time....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-19 10:26:00 +0000 UTC'>October 19, 2023</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to Bash function example and trics" href="https://www.n01.es/posts/bash-script-dir-structure-creation/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2>Change files extensions
     </h2>
   </header>

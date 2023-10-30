@@ -6,7 +6,17 @@
     <description>Recent content in Posts on ᘛ⁐̤ᕐᐷ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jun 2023 06:45:04 +0000</lastBuildDate><atom:link href="https://www.n01.es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Oct 2023 10:26:00 +0000</lastBuildDate><atom:link href="https://www.n01.es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash function example and trics</title>
+      <link>https://www.n01.es/posts/bash-script-dir-structure-creation/</link>
+      <pubDate>Thu, 19 Oct 2023 10:26:00 +0000</pubDate>
+      
+      <guid>https://www.n01.es/posts/bash-script-dir-structure-creation/</guid>
+      <description>Validata correct number of arguments if [ &amp;#34;$#&amp;#34; -ne 2 ]; then echo &amp;#34;Illegal number of parameters ($#, should be 2)&amp;#34; exit 1 fi $# returns number of parameters passed to script. If it&amp;rsquo;s less then 2, script ends with error.
+Check if environment variable is set if [ -z &amp;#34;$CLEANING_JOB&amp;#34; ] then echo &amp;#34;Environmental variable [CLEANING_JOB] does not exist.&amp;#34; exit 1 fi Bash function example set_dir_structure() { YEAR=$(date +&amp;#34;%Y&amp;#34; &amp;#34;$@&amp;#34;) MONTH=$(date +&amp;#34;%m&amp;#34; &amp;#34;$@&amp;#34;) DAY=$(date +&amp;#34;%d&amp;#34; &amp;#34;$@&amp;#34;) HOUR=$(date +&amp;#34;%H&amp;#34; &amp;#34;$@&amp;#34;) retval=&amp;#34;$YEAR/$MONTH/$DAY/$HOUR&amp;#34; } This function can be executed with or without parameter to get proper dir structure related with date and time.</description>
+    </item>
+    
     <item>
       <title>Change files extensions</title>
       <link>https://www.n01.es/posts/change-files-extensions/</link>
